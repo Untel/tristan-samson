@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tristan Samson • Freelance Colorist</title>
+  <meta name="description" content="Tristan Samson, freelance colorist. Tailored color grading for commercials, fashion films and music videos.">
+  <meta property="og:title" content="Tristan Samson • Freelance Colorist">
+  <meta property="og:description" content="Tailored color grading for commercials, fashion films and music videos.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300;400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <a class="brand" href="#" data-home>
+      <span class="brand__name" data-bind="name"></span>
+      <span class="brand__role" data-bind="role"></span>
+    </a>
+    <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <nav id="menu" class="menu" aria-hidden="true">
+    <div class="menu__inner">
+      <ul class="menu__links" data-nav></ul>
+      <div class="menu__footer">
+        <p class="menu__bio" data-bind="description"></p>
+        <div class="menu__contact">
+          <a data-email href="#"></a>
+          <a data-phone href="#"></a>
+          <ul class="socials" data-socials></ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div class="hero__media">
+        <video class="hero__video" data-hero-video muted loop playsinline autoplay preload="metadata"></video>
+        <img class="hero__poster" data-hero-poster alt="">
+      </div>
+      <div class="hero__content">
+        <a class="hero__title" href="#work">
+          <h1><span data-bind="name"></span><span class="hero__role" data-bind="role"></span></h1>
+          <span class="hero__arrow" aria-hidden="true">↓</span>
+        </a>
+      </div>
+    </section>
+
+    <section id="work" class="work">
+      <div class="work__head">
+        <h2 class="work__title" data-section-title>Work</h2>
+        <ul class="filters" data-filters></ul>
+      </div>
+      <div class="grid" data-grid></div>
+      <p class="empty" data-empty hidden>No films in this category yet.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© <span data-year></span> <span data-bind="name"></span></span>
+    <a data-email href="#"></a>
+  </footer>
+
+  <div class="lightbox" data-lightbox aria-hidden="true" role="dialog" aria-modal="true">
+    <button class="lightbox__close" type="button" aria-label="Close">×</button>
+    <div class="lightbox__inner">
+      <div class="lightbox__player" data-player></div>
+      <div class="lightbox__meta">
+        <h3 data-lb-title></h3>
+        <dl class="credits" data-lb-credits></dl>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/content.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
